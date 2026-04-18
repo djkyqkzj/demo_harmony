@@ -94,3 +94,233 @@ entry/src/main/ets/
 - `components/` 中仍绑定旧详情页跳转的组件
 - `dialog/` 中仍绑定旧业务页面的抽屉或弹框
 - `resources/base/media/` 中未使用的旧资源文件
+
+## 音乐播放器使用说明
+
+### 核心位置
+
+播放器核心是全局单例服务：
+
+- `entry/src/main/ets/common/utils/AudioPlayerService.ets`
+
+相关配套模块：
+
+- `entry/src/main/ets/common/constants/GlobalPlayerStore.ets`
+- `entry/src/main/ets/common/utils/AVSessionManager.ets`
+- `entry/src/main/ets/common/constants/StorageConstants.ets`
+
+### 当前架构
+
+这个项目的播放器不是页面级实例，而是全局单例。
+
+它负责：
+
+- 创建和管理 `AVPlayer`
+- 播放、暂停、恢复、停止、跳转进度
+- 上一首、下一首、自动切歌
+- 定时停止播放
+- 同步全局播放状态
+- 通过 `EventBus` 广播状态给页面
+- 对接 HarmonyOS `AVSession`，支持锁屏和系统媒体控制
+
+### 初始化方式
+
+播放器相关初始化在应用入口中完成：
+
+- `entry/src/main/ets/entryability/EntryAbility.ets`
+
+主要做了两件事：
+
+- 应用启动时执行 `audioPlayerService.initAVSession(this.context)`
+- 应用销毁时执行 `audioPlayerService.destroy()`
+
+因此在页面中一般不需要重复创建播放器实例，直接使用全局单例即可。
+
+### 开始播放
+
+最核心的方法是：
+
+```ts
+audioPlayerService.playMusic(music, playIndex)
+```
+
+参数说明：
+
+- `music`：整个歌单或播放列表对象，类型为 `Music`
+- `playIndex`：播放 `music.musics` 中的第几首，默认 `0`
+
+播放器的数据结构依赖当前项目的模型：
+
+- 歌单级信息在 `Music`
+- 单曲信息在 `Play`
+- 实际播放列表在 `music.musics`
+
+当前逻辑会优先播放：
+
+1. `local_music_address_2`
+2. `music_address_2`
+
+也就是说，若本地已下载，会优先播放本地文件；否则回退到在线地址。
+
+### 常用控制方法
+
+```ts
+audioPlayerService.playMusic(music, index)
+audioPlayerService.pause()
+audioPlayerService.resume()
+audioPlayerService.togglePlayPause()
+audioPlayerService.stop()
+audioPlayerService.seek(positionMs)
+audioPlayerService.playNext()
+audioPlayerService.playPrevious()
+audioPlayerService.getPlayState()
+```
+
+其中 `getPlayState()` 返回的信息包括：
+
+- `isPlaying`
+- `isPaused`
+- `currentTime`
+- `duration`
+- `currentMusic`
+- `currentPlayIndex`
+- `playerUri`
+
+### 页面如何获取播放状态
+
+播放器状态主要通过两种方式同步到 UI：
+
+1. `globalPlayerStore`
+2. `EventBus`
+
+`globalPlayerStore` 中保存了：
+
+- 当前播放 URI
+- 是否正在播放
+- 当前歌单信息
+- 播放模式
+- 当前播放进度
+- 总时长
+
+播放器事件定义在 `StorageConstants` 中，常用事件有：
+
+- `PLAYER_STATE_CHANGE`
+- `PLAYER_TIME_UPDATE`
+- `PLAYER_ERROR`
+- `PLAYER_COMPLETED`
+- `TIMER_PLAY_START`
+- `TIMER_PLAY_STOP`
+- `TIMER_PLAY_UPDATE`
+
+页面通常这样接：
+
+```ts
+EventBus.listen(StorageConstants.PLAYER_STATE_CHANGE, (state) => {
+  // 更新播放按钮、当前歌曲等
+});
+
+EventBus.listen(StorageConstants.PLAYER_TIME_UPDATE, (info) => {
+  // 更新进度条
+});
+```
+
+### 播放模式
+
+自动切歌逻辑会读取：
+
+```ts
+globalPlayerStore.playMethod
+```
+
+当前项目主要支持：
+
+- `single`：单曲循环
+- `list`：列表循环
+
+设置方式：
+
+```ts
+globalPlayerStore.setPlayMethod('single')
+globalPlayerStore.setPlayMethod('list')
+```
+
+### 定时停止播放
+
+项目内已有定时停止播放能力，对应弹框：
+
+- `entry/src/main/ets/dialog/RegularTime.ets`
+
+使用方法：
+
+```ts
+audioPlayerService.startTimerPlay(minutes)
+audioPlayerService.stopTimerPlay()
+```
+
+定时状态会通过以下事件广播：
+
+- `TIMER_PLAY_START`
+- `TIMER_PLAY_STOP`
+- `TIMER_PLAY_UPDATE`
+
+### 系统媒体控制
+
+播放器已接入 HarmonyOS `AVSession`，相关逻辑在：
+
+- `entry/src/main/ets/common/utils/AVSessionManager.ets`
+
+支持的系统控制命令有：
+
+- 播放
+- 暂停
+- 下一首
+- 上一首
+- 跳转进度
+
+系统命令会通过 `AVSESSION_COMMAND` 事件回传给 `AudioPlayerService`。
+
+### 后台播放
+
+应用进入后台后，会在 `EntryAbility` 中尝试启动后台长时任务。
+
+前提是：
+
+- 当前播放器确实处于播放状态
+
+相关事件：
+
+- `START_BACKGROUND_TASK`
+- `STOP_BACKGROUND_TASK`
+
+### 当前项目中的典型使用方式
+
+1. 页面或弹框拿到一个完整 `Music` 对象
+2. 调用 `audioPlayerService.playMusic(music, index)`
+3. 页面通过 `EventBus` 或 `globalPlayerStore` 刷新 UI
+4. 用户通过按钮调用暂停、恢复、切歌、seek
+
+最小调用示例：
+
+```ts
+import audioPlayerService from '../common/utils/AudioPlayerService';
+
+await audioPlayerService.playMusic(musicData, 0);
+audioPlayerService.togglePlayPause();
+audioPlayerService.playNext();
+audioPlayerService.seek(30000);
+```
+
+### 需要注意的耦合点
+
+这个播放器当前还没有完全业务解耦，仍然和原项目绑定了几块逻辑：
+
+- `playMusic()` 中有 VIP 校验
+- 校验失败时会跳转旧会员页 `pages/member/member`
+- `globalPlayerStore.setPlayListInfo()` 中会顺带刷新用户信息
+- 部分组件和弹框仍保留原业务跳转方式
+
+如果后续要把播放器单独复用到新项目，建议优先做这几步：
+
+1. 去掉 `playMusic()` 中的会员页跳转
+2. 去掉 `globalPlayerStore` 中和用户资料接口绑定的逻辑
+3. 把播放器输入模型改成更通用的播放列表结构
