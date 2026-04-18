@@ -1,0 +1,12 @@
+{
+  "src": [
+    "pages/SplashPage",
+    "pages/WebViewPage",
+    "pages/GuidePage",
+    "pages/login/LoginPage",
+    "pages/tab/MainPage",
+    "pages/tab/home",
+    "pages/tab/library",
+    "pages/tab/search"
+  ]
+}

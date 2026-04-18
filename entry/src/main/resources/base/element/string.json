@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "demo"
+    },
+    {
+      "name": "loading",
+      "value": "加载中..."
+    },
+    {
+      "name": "bundleInfo",
+      "value": "需要查询应用信息"
+    },
+    {
+      "name": "oaid",
+      "value": "广告跟踪"
+    },
+    {
+      "name": "udid",
+      "value": "广告跟踪"
+    },
+    {
+      "name": "album",
+      "value": "读取相册"
+    },
+    {
+      "name": "savePoster",
+      "value": "保存海报到相册"
+    },
+    {
+      "name": "location",
+      "value": "获取媒体位置信息"
+    },
+    {
+      "name": "internet_permission_reason",
+      "value": "用于访问网络"
+    },
+    {
+      "name": "media_permission_reason",
+      "value": "用于音乐播放"
+    },
+    {
+      "name": "media_permission_n",
+      "value": "用于音乐播放放到通知栏"
+    },
+    {
+      "name": "background_permission_reason",
+      "value": "需要后台保活权限以持续播放音乐"
+    },
+    {
+      "name": "running_lock_permission_reason", 
+      "value": "需要运行锁权限以防止应用被系统回收"
+    }
+  ]
+}

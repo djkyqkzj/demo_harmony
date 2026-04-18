@@ -1,0 +1,672 @@
+{
+  "string": [
+    {
+      "name": "privacy_title",
+      "value": "Welcome to demo"
+    },
+    {
+      "name": "privacy_content",
+      "value": "We attach great importance to protecting your personal information and privacy. Before you use demo, we would like to solemnly explain to you demo\\'s User Agreement, Privacy Policy and Children\\'s Privacy Policy."
+    },
+    {
+      "name": "privacy_user",
+      "value": "《User Agreement》"
+    },
+    {
+      "name": "privacy_policy",
+      "value": "《Privacy Policy》"
+    },
+    {
+      "name": "privacy_children",
+      "value": "《Children\\'s Privacy Policy》"
+    },
+    {
+      "name": "privacy_user_content",
+      "value": "mainly includes: Scope of application of the agreement, service content and form, software use and licensing, terminal responsibility security, user rights and obligations, user behavior norms, user information protection, etc."
+    },
+    {
+      "name": "demo",
+      "value": "demo"
+    },
+    {
+      "name": "privacy_demo",
+      "value":"explanation:"
+    },
+    {
+      "name": "privacy_pirvace1",
+      "value":"(1) demo belongs to the \\\"online music category\\\" APP, with basic functions including \\\"login and registration, music playback, browsing, downloading\\\", etc. By agreeing to the basic privacy protection guidelines, you agree to the collection and processing of your necessary IMEI during login registration, music playback, browsing, and downloading provided by this application IMSI, Device MAC address HarmonyOS NEXT ID, OAID(HarmonyOS)、ODID(HarmonyOS)、AAID, ICCID, SN, SUPI, SUCI, Software installation list, location, contacts, call history, calendar, SMS, local phone number, pictures, audio and video, clipboard and other personal information. The personal information collected for providing extended functions will be subject to your separate consent when using specific functions."
+    },
+    {
+      "name": "privacy_pirvace2",
+      "value":"(2) Based on the principles of legality, legitimacy and necessity, we will collect information necessary to realize product functions, including: the information you fill in when registering your account (nickname, mobile phone number, etc.): your network log and device information device model: when you choose to use some services, we will obtain the information required to provide the relevant services after obtaining your consent. For example, when you use location-related services, we may obtain the location information of your device."
+    },
+    {
+      "name": "privacy_pirvace3",
+      "value":"(3) demo operators have strict data protection and management measures. We will take security measures to protect your personal information from loss, unauthorized access, use, disclosure, modification or damage, and other forms of illegal processing."
+    },
+    {
+      "name": "privacy_pirvace4",
+      "value":"(4) You can query, correct, delete your information and manage related authorizations in the App or on your device. We also provide a channel for account cancellation. If you have any comments, suggestions or questions about this announcement and related agreements, you can contact us at support@demo.art"
+    },
+    {
+      "name": "disagree",
+      "value":"Disagree"
+    },
+    {
+      "name": "agree",
+      "value":"Agree"
+    },
+    {
+      "name": "slogan1",
+      "value":"Listen Inward"
+    },
+    {
+      "name": "slogan2",
+      "value":"Find Balance"
+    },
+    {
+      "name": "loginTitle",
+      "value":"Welcome back"
+    },
+    {
+      "name": "phone",
+      "value":"Phone"
+    },
+    {
+      "name": "code",
+      "value":"Code"
+    },
+    {
+      "name": "getCode",
+      "value":"Get Code"
+    },
+    {
+      "name": "loginBtnTxt",
+      "value":"Log in"
+    },
+    {
+      "name": "policy1",
+      "value":"Log in indicates that you have read and agree to the"
+    },
+    {
+      "name": "policy2",
+      "value":"and the"
+    },
+    {
+      "name": "incorrectPhone",
+      "value":"ncorrect phone number format"
+    },
+    {
+      "name": "home",
+      "value": "Home"
+    },
+    {
+      "name": "library",
+      "value": "Library"
+    },
+    {
+      "name": "searchBtn",
+      "value": "Discover"
+    },
+    {
+      "name": "placeCheck",
+      "value": "Please check the agreement"
+    },
+    {
+      "name": "enterVerification",
+      "value": "Please enter the verification code"
+    },
+    {
+      "name": "pleaseRead",
+      "value": "In order to better protect your legal rights and interests, please read and agree to the following agreement"
+    },
+    {
+      "name": "srviceAgreement",
+      "value": "Service Agreement and Privacy Protection"
+    },
+    {
+      "name": "homeSetting",
+      "value": "Personalize Shortcuts"
+    },
+    {
+      "name": "recommend",
+      "value": "Popular"
+    },
+    {
+      "name": "noMore",
+      "value": "no more"
+    },
+    {
+      "name": "settingChannelSuccess",
+      "value": "Setting successful"
+    },
+    {
+      "name": "settingChannelFail",
+      "value": "Setting failed"
+    },
+    {
+      "name": "save",
+      "value": "save"
+    },
+    {
+      "name": "editShortcut",
+      "value": "Edit shortcut keys"
+    },
+    {
+      "name": "upTo",
+      "value": "Up to 7 items can be set"
+    },
+    {
+      "name": "upToMin",
+      "value": "At least 3 items can be set"
+    },
+    {
+      "name": "membership",
+      "value": "Subscription"
+    },
+    {
+      "name": "checkin",
+      "value": "Check-in"
+    },
+    {
+      "name": "notifi",
+      "value": "Notifications"
+    },
+    {
+      "name": "appShare",
+      "value": "Share with friends"
+    },
+    {
+      "name": "help",
+      "value": "Help & Feedback"
+    },
+    {
+      "name": "setting",
+      "value": "Settings"
+    },
+    {
+      "name": "recentPlay",
+      "value": "Recent Play"
+    },
+    {
+      "name": "collect",
+      "value": "Collection"
+    },
+    {
+      "name": "download",
+      "value": "Download"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "successful",
+      "value": "Successful"
+    },
+    {
+      "name": "like",
+      "value": "Like"
+    },
+    {
+      "name": "play",
+      "value": "Play"
+    },
+    {
+      "name": "playing",
+      "value": "Playing"
+    },
+    {
+      "name": "more",
+      "value": "More"
+    },
+    {
+      "name": "searchPlaceholder",
+      "value": "Search"
+    },
+    {
+      "name": "popular",
+      "value": "Popular"
+    },
+    {
+      "name": "searchTip",
+      "value": "请输入搜索内容"
+    },
+    {
+      "name": "music",
+      "value": "Playlist"
+    },
+    {
+      "name": "article",
+      "value": "Article"
+    },
+    {
+      "name": "playlist",
+      "value": "Playlist"
+    },
+    {
+      "name": "checkTime",
+      "value": "Choose a time（min）"
+    },
+    {
+      "name": "checkTimeEnd",
+      "value": "After closing"
+    },
+    {
+      "name": "checkTimeClose",
+      "value": "Close"
+    },
+    {
+      "name": "feel",
+      "value": "Like this playlist? Rate it!"
+    },
+    {
+      "name": "point",
+      "value": "point"
+    },
+    {
+      "name": "share",
+      "value": "Share"
+    },
+    {
+      "name": "wechat",
+      "value": "We chat"
+    },
+    {
+      "name": "friendsCircle",
+      "value": "Friends Circle"
+    },
+    {
+      "name": "poster",
+      "value": "Generate Poster"
+    },
+    {
+      "name": "listenInward",
+      "value": "Listen Inward, Find Balance"
+    },
+    {
+      "name": "noConnect",
+      "value": "Network error,please reload the page"
+    },
+    {
+      "name": "downloaded",
+      "value": "Download Success"
+    },
+    {
+      "name": "delete",
+      "value": "Delete"
+    },
+    {
+      "name": "sureDelete",
+      "value": "Are you sure you want to delete the playlist"
+    },
+    {
+      "name": "hint",
+      "value": "Hint"
+    },
+    {
+      "name": "confirm",
+      "value": "Confirm"
+    },
+    {
+      "name": "deleteTip",
+      "value": "This playlist is currently playing. Please switch to another playlist before deleting it."
+    },
+    {
+      "name": "deleteSuccess",
+      "value": "Delete successfully"
+    },
+    {
+      "name": "deleteFail",
+      "value": "Delete failed"
+    },
+    {
+      "name": "justNow",
+      "value": " Justn now"
+    },
+    {
+      "name": "minutesAgo",
+      "value": " Minutes ago"
+    },
+    {
+      "name": "hoursAgo",
+      "value": " Hours ago"
+    },
+    {
+      "name": "daysAgo",
+      "value": " Days ago"
+    },
+    {
+      "name": "monthsAgo",
+      "value": " Months ago"
+    },
+    {
+      "name": "yearsAgo",
+      "value": " Years ago"
+    },
+    {
+      "name": "basic",
+      "value": "Basic"
+    },
+    {
+      "name": "profile",
+      "value": "Profile"
+    },
+    {
+      "name": "playlistNotification",
+      "value": "Playlist Notification"
+    },
+    {
+      "name": "permission",
+      "value": "Permission"
+    },
+    {
+      "name": "deleteAccount",
+      "value": "Delete Account"
+    },
+    {
+      "name": "function",
+      "value": "Function"
+    },
+    {
+      "name": "invitecode",
+      "value": "Referral Code"
+    },
+    {
+      "name": "about",
+      "value": "About"
+    },
+    {
+      "name": "aboutUs",
+      "value": "About Us"
+    },
+    {
+      "name": "logout",
+      "value": "Log Out"
+    },
+    {
+      "name": "lunguageChange",
+      "value": "Language Change"
+    },
+    {
+      "name": "logoutC",
+      "value": "Are you sure you want to log out？"
+    },
+    {
+      "name": "submit",
+      "value": "Submit"
+    },
+    {
+      "name": "email",
+      "value": "demo Email"
+    },
+    {
+      "name": "privacy_user1",
+      "value": "User Agreement"
+    },
+    {
+      "name": "privacy_policy1",
+      "value": "Privacy Policy"
+    },
+    {
+      "name": "privacy_children1",
+      "value": "Children\\'s Privacy Policy"
+    },
+    {
+      "name": "appService",
+      "value": "App service registration information"
+    },
+    {
+      "name": "business",
+      "value": "Business license "
+    },
+    {
+      "name": "qualifications",
+      "value": "Qualifications"
+    },
+    {
+      "name": "delectAccountRule",
+      "value": "Account Deletion Rules"
+    },
+    {
+      "name": "deleteIng",
+      "value": "Account cancellation in progress"
+    },
+    {
+      "name": "deleteAccount1",
+      "value": "1、The demo account deletion process includes a 7-day reconsideration period. Once the account is deleted, all data associated with the account will be permanently cleared or anonymized (including but not limited to purchased music packages, playlists, comments, etc.). The account cannot be recovered after deletion, so please proceed with caution."
+    },
+    {
+      "name": "deleteAccount2",
+      "value": "2、After the account is deleted, you can log in again using your phone number."
+    },
+    {
+      "name": "deleteAccount3",
+      "value": "3、The account must have no disputes, including but not limited to complaints or reports, and all services must be completed or voluntarily forfeited."
+    },
+    {
+      "name": "readAgreed",
+      "value": "I have read and agreed to "
+    },
+    {
+      "name": "accountCancellationAgreement",
+      "value": "Account Cancellation Agreement"
+    },
+    {
+      "name": "hesitationPeriod",
+      "value": "Cooling-off period"
+    },
+    {
+      "name": "revocationCancellation",
+      "value": "Revocation of cancellation"
+    },
+    {
+      "name": "pleasEenter",
+      "value": "Please enter"
+    },
+    {
+      "name": "userInfo",
+      "value": "User Info"
+    },
+    {
+      "name": "change",
+      "value": "Change"
+    },
+    {
+      "name": "nikeName",
+      "value": "NikeName"
+    },
+    {
+      "name": "nickNameNotEmpty",
+      "value": "nickName Not Empty"
+    },
+    {
+      "name": "contactOptional",
+      "value": "Contact(Optional)"
+    },
+    {
+      "name": "feedBack",
+      "value": "Thanks! We’ll handle it soon"
+    },
+    {
+      "name": "enterContent",
+      "value": "Enter your content here"
+    },
+    {
+      "name": "vip_tip",
+      "value": "Subscribe on Android or iPhone—your account is shared and will work here too."
+    },
+    {
+      "name": "vip_tip_title",
+      "value": "Membership Service Notice"
+    },
+    {
+      "name": "vip_tip1",
+      "value": "To ensure the best experience, payment and subscription features are currently unavailable on HarmonyOS devices.\nYou can purchase a membership on an Android phone or iPhone—your account is shared across devices, and all premium playlists will be instantly available on this device once subscribed."
+    },
+    {
+      "name": "vip_tip_btn",
+      "value": "Got it"
+    },
+    {
+      "name": "empty",
+      "value": "No data"
+    },
+    {
+      "name": "member",
+      "value": "Membership Center"
+    },
+    {
+      "name": "day",
+      "value": ""
+    },
+    {
+      "name": "free",
+      "value": "Free-play-days "
+    },
+    {
+      "name": "expiredText",
+      "value": "Expired date:"
+    },
+    {
+      "name": "viptitleText",
+      "value": "membershipVIP  has been activated'"
+    },
+    {
+      "name": "PaymentMethod",
+      "value": "Payment Method"
+    },
+    {
+      "name": "WePay",
+      "value": "WePay"
+    },
+    {
+      "name": "confirmPay",
+      "value": "Confirm Payment"
+    },
+    {
+      "name": "hint1",
+      "value": "Opening a membership means accepting the"
+    },
+    {
+      "name": "hint2",
+      "value": "《Member service agreement》"
+    },
+    {
+      "name": "hintContent1",
+      "value": "You are already a member and do not need to purchase"
+    },
+    {
+      "name": "FreePlaylist",
+      "value": "Free Playlist"
+    },
+    {
+      "name": "FreeTag",
+      "value": "Free"
+    },
+    {
+      "name": "MemberBenefits",
+      "value": "Member Benefits"
+    },
+    {
+      "name": "HighFidelityAudio",
+      "value": "High Fidelity Audio"
+    },
+    {
+      "name": "HighFidelityDesc",
+      "value": "Enjoy high fidelity audio quality"
+    },
+    {
+      "name": "MemberMusicLibrary",
+      "value": "Member Library"
+    },
+    {
+      "name": "MemberLibraryDesc",
+      "value": "Access exclusive member library"
+    },
+    {
+      "name": "Medals",
+      "value": "Medals"
+    },
+    {
+      "name": "appPermissions",
+      "value": "App Permissions"
+    },
+    {
+      "name": "shareWithFriends",
+      "value": "Share with Friends"
+    },
+    {
+      "name": "healingBodyMind",
+      "value": "Listen inward"
+    },
+    {
+      "name": "enjoyPeace",
+      "value": "Find Balance"
+    },
+    {
+      "name": "joindemo",
+      "value": "Join demo and join many like-minded people working towards health and happiness!"
+    },
+    {
+      "name": "generatingShareImage",
+      "value": "Generating share image..."
+    },
+    {
+      "name": "wechatConfigError",
+      "value": "WeChat configuration error, please check AppID"
+    },
+    {
+      "name": "installWechat",
+      "value": "Please install WeChat"
+    },
+    {
+      "name": "generateShareImageFailed",
+      "value": "Failed to generate share image"
+    },
+    {
+      "name": "shareSuccess",
+      "value": "Share successful"
+    },
+    {
+      "name": "shareFailedRetry",
+      "value": "Share failed, please retry"
+    },
+    {
+      "name": "shareErrorRetry",
+      "value": "Share error, please retry"
+    },
+    {
+      "name": "generatingShareLink",
+      "value": "Generating share link..."
+    },
+    {
+      "name": "shareFailedCheckNetwork",
+      "value": "Share failed, please check network connection"
+    },
+    {
+      "name": "howAreYouToday",
+      "value": "How are you today?"
+    },
+    {
+      "name": "moodAnalysis",
+      "value": "Mood Analysis"
+    },
+    {
+      "name": "thisWeek",
+      "value": "This Week"
+    },
+    {
+      "name": "moodInfluences",
+      "value": "Mood Influences"
+    },
+    {
+      "name": "checkinSuccess",
+      "value": "Check-in successful"
+    },
+    {
+      "name": "operationFailedRetry",
+      "value": "Operation failed, please try again"
+    }
+  ]
+}

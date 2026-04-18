@@ -1,0 +1,28 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#000000"
+    },
+    {
+      "name": "secondary",
+      "value": "#A69B97"
+    },
+    {
+      "name": "status_bar_bg",
+      "value": "#ffffff"
+    },
+    {
+      "name": "status_bar_content",
+      "value": "#666666"
+    },
+    {
+      "name": "f2f2f2",
+      "value": "#f2f2f2"
+    },
+    {
+      "name": "slider_track",
+      "value": "#33FFFFFF"
+    }
+  ]
+}

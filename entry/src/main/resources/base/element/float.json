@@ -1,0 +1,24 @@
+{
+  "float": [
+    {
+      "name": "page_text_font_size",
+      "value": "50fp"
+    },
+    {
+      "name": "slider_height",
+      "value": "16vp"
+    },
+    {
+      "name": "slider_margin_sm",
+      "value": "-4vp"
+    },
+    {
+      "name": "slider_margin_md",
+      "value": "-2vp"
+    },
+    {
+      "name": "slider_margin_lg",
+      "value": "-4vp"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "/Users/daijingkang/Documents/djdg/demo_harmony/entry/key/demo.p12",
+          "storePassword": "0000001999EF5F58E7AE742F914041420E41A89F58BC7E37017FFFF8536E1AF1D367F81D8A064B31DF",
+          "keyAlias": "demo",
+          "keyPassword": "0000001900E819B80500F69BA2BCBE1BF87CB4A53AA7894EE33313D47D19C9003841976456DE946BBC",
+          "signAlg": "SHA256withECDSA",
+          "profile": "/Users/daijingkang/Documents/djdg/demo_harmony/entry/key/demoRelease.p7b",
+          "certpath": "/Users/daijingkang/Documents/djdg/demo_harmony/entry/key/demo.cer"
+        }
+      },
+      {
+        "name": "dubug",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/daijingkang/.ohos/config/dubug_demo_harmony_ICTz01lz4ui-u7vJwfe5THscOUdKnHKXoRPDr2U-Z8w=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B74805E98F07B663CADA7EC292A16AA3681CCAD3C4170B07FD535B85F3C9F174E00273AE22A8F52",
+          "profile": "/Users/daijingkang/.ohos/config/dubug_demo_harmony_ICTz01lz4ui-u7vJwfe5THscOUdKnHKXoRPDr2U-Z8w=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/daijingkang/.ohos/config/dubug_demo_harmony_ICTz01lz4ui-u7vJwfe5THscOUdKnHKXoRPDr2U-Z8w=.p12",
+          "storePassword": "0000001B046B15722A89E0D9715AB1F7FBEE33C7EDA6B301B649A0A149791FAB0002EEE8C67003EEA3D715"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "5.1.0(18)",
+        "compatibleSdkVersion": "5.1.0(18)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
